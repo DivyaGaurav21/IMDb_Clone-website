@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a:link{
+    text-decoration: none
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(56, 56, 56);
+    font-family: 'Didact Gothic', sans-serif;
+    position: relative;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+/* css related to navigation section  */
+
+.imdb-logo img{
+    width: 75px;
+    height: 35px;
+}
+.nav-menu{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:black;
+}
+.logo-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 15%;
+    min-width: 170px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.fabs-login{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    min-width: 260px;
+    font-size: .8rem;
+    color: #fff;
+}
+.fabs-login h3 a{
+    color: #fff;
+}
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+}
+.search-box input {
+    width: 100%;
+    height: 30px;
+    padding-left: 20px;
+    border-radius: 6px;
+    min-width: 200px;
+    border: none;
+    outline-style: dotted;
+    font-size: 1rem;
+}
+#search-icon{
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+#diff-color{
+    color: aqua;
+    cursor: pointer;
+}
+.hover:hover{
+    background-color:rgb(41, 39, 39);
+    box-sizing: border-box;
+    padding: 8px 2px;
+    border-radius: 5px;
+}
+
+/* css for popup when you hover IMDbPro  */
+.pop-up{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom, #242555, #03a5db);
+    padding: 10px;
+    box-shadow: 5px 10px 10px #5a5a5ab0;
+    width: 55%;
+    min-width: 700px;
+    margin: auto;
+    border-radius: 5px;
+    position:absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    display: none;
+}
+.popup-img{
+    width: 160px;
+    height: 180px;
+}
+.popup-img img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.pop-up-desc{
+    color: #fff;
+    font-weight: 400;
+}
+.popup-list li{ 
+    line-height: 25px;
+    list-style:disc;
+    /* padding-left: 10px; */
+    font-size: 1rem;
+}
+.popup-btn{
+    width: 50%;
+    height: 30px;
+    margin-top: 20px;
+    background-color: yellow;
+    border: none;
+    border-radius: 5px;
+}
+.imdbpro:hover + .pop-up{
+    display: flex;
+ }
+
+
+ /* css for menu option  */
+ .side-option{
+    position: absolute;
+    background: #303030;
+    height: 100vh;
+    width:300px;
+    left:-300px;
+    /* left: 0; */
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+     font-family: 'Montserrat', sans-serif;
+}
+.side-option .fa{
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: right;
+    height: 50px;
+    padding: 10px;
+    margin:-1px;
+    background-color: #5c5c5c;
+}
+.side-list li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 17px;
+    color: #fff;
+    font-size: 1.1rem;
+}

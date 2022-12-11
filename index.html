@@ -6,10 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMDb clone</title>
     <!-- style css link for index page  -->
-    <link rel="./Styles/style.css" href="style.css">
+      <link rel="stylesheet" href="./Styles/style.css">
+      <!-- here we use font awsome script toolkit -->
+    <script
+    src="https://kit.fontawesome.com/74894dafb2.js"
+    crossorigin="anonymous"
+  ></script>
+    <!-- google font link for awsome text  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <!-- body section begins here -->
 <body>
+    <!-- this is the main container of website  -->
+    <section class="main">
+
+
+         <nav class="nav-menu">
+
+             <!-- nav 1st child  -->
+              <div class="logo-menu" onclick=showMenu()>
+                <div class="imdb-logo">
+                     <img src="./assets/IMDB.png" alt="imdb-logo">
+                </div>
+                <div class="bar-menu hover">
+                    <i class="fa-solid fa-bars"></i> <span>Menu</span>
+                </div>
+              </div>
+                 <!-- nav second child  -->
+              <div class="search-box">
+                <input type="text" name="searchMovie" id="searchMovie" placeholder="Search IMDb"
+                autocomplete="off">
+                <div id="search-icon"> <i class="fa-solid fa-magnifying-glass"></i></div>
+              </div>
+              <!-- nav 3rd vhild  -->
+              <div class="fabs-login">
+                <h1 class="hover imdbpro">IMDb<span id="diff-color">Pro</span>  |</h1>
+                 <!-- this small page pop will be shown when you hover IMDbPro option  -->
+<!-- ----------- -->
+                <div class="pop-up">
+                  <div class="popup-img">
+                      <img src="./assets/popup.png" alt="popup-img-">
+                  </div>
+      
+                  <div class="pop-up-desc">
+                    <h2 style="font-size: 20px;">The essential resource for entertainment professionals</h2>
+                    <ul class="popup-list">
+                      <li>Find industry contacts & talent represantation</li>
+                      <li>Acess in development titles not available on IMDb</li>
+                      <li>Get latest news from leading industry trades</li>
+                      <li>Claim your pagr and control brand across IMDb & Amazon</li>
+                  </ul>
+                   <button class="popup-btn">Try IMDbPro Free</button>
+                  </div>
+                 </div>
+<!-- --------------- -->
+
+                <h3 class="hover"><a href=""><i class="fa-solid fa-folder-plus"></i> Watchlist</a></h3>
+                <h3 class="hover"><a href="">Sign In</a></h3>
+              </div>
+         </nav>
+            
+         <!-- side menu of imdb web  -->
+
+         <div class="side-option" id="side">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <br>
+          <br>
+           <ul class="side-list">
+               <li>
+                <div> <i class="fa-solid fa-film"></i>&nbsp;<span>Movies</span></div>
+                <div><i class="fa-solid fa-chevron-down"></i></div>
+               </li>
+               <li>
+                <div> <i class="fa-solid fa-film"></i>&nbsp;<span>Movies</span></div>
+                <div><i class="fa-solid fa-chevron-down"></i></div>
+               </li>
+               <li>
+                <div> <i class="fa-solid fa-film"></i>&nbsp;<span>Movies</span></div>
+                <div><i class="fa-solid fa-chevron-down"></i></div>
+               </li>
+               <li>
+                <div> <i class="fa-solid fa-film"></i>&nbsp;<span>Movies</span></div>
+                <div><i class="fa-solid fa-chevron-down"></i></div>
+               </li>
+               <li>
+                <div> <i class="fa-solid fa-film"></i>&nbsp;<span>Movies</span></div>
+                <div><i class="fa-solid fa-chevron-down"></i></div>
+               </li>
+               <li>
+                <div> <i class="fa-solid fa-film"></i>&nbsp;<span>Movies</span></div>
+                <div><i class="fa-solid fa-chevron-down"></i></div>
+               </li>
+               <br>
+               <br>
+               <li>
+                  <div>
+                    <h4>IMDbPro</h4>
+                    <p style="font-size: 15px;">For Industrial Professionals</p>
+                  </div>
+                  <div><i class="fa-solid fa-chevron-down"></i></div>
+               </li>
+             
+           </ul>
+       </div>
+         
+
+        
+
+
     
+
+
+    </section>
+   <script type="text/javascript" src="./JavaScript/script1.js"></script> 
 </body>
 </html>
