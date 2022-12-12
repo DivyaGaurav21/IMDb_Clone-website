@@ -35,7 +35,7 @@ function apiCall(url) {
     x.send();
     // Once the request is sent, then we can use the event handlers to handle XHR object responses.
     x.onload = function () {
-        // container.innerHTML="";
+        container.innerHTML="";
         var res = x.response;
         // resp to JSON data 
         var conJson = JSON.parse(res);
@@ -44,7 +44,7 @@ function apiCall(url) {
         // console.log(moviesArray)
         // create the movie cards here 
         moviesArray.forEach(movie => moviesElement(movie));
-        addMovieToListButtonArray = document.getElementsByClassName('.add-movie-to-list');
+        // addMovieToListButtonArray = document.getElementsByClassName('.add-movie-to-list');
     }
 }
 
@@ -53,7 +53,7 @@ function apiCall(url) {
 function moviesElement(movie) {
     var movieElement = document.createElement('div');
     movieElement.classList.add('movie-element');
-    console.log(movie.poster_path)
+    // console.log(movie.poster_path)
     movieElement.innerHTML = `
     <img src=${IMAGE_URL + movie.poster_path} alt="{movie.id}">
     <div class="movie-info">
@@ -98,3 +98,19 @@ function addMovie(btnId){
         localStorage.setItem('MovieArray', JSON.stringify(oldLocalsMov));
     }
 }
+
+
+// this is the search function 
+search.addEventListener('keyup', function(){
+    // input char in the search box
+    var input = search.value;
+    console.log(input)
+    // getting all the movies related to the input in the search option 
+    var inputUrl = `https://api.themoviedb.org/3/search/movie?${API_KEY}&query=${input}`;
+    // https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=Jack+Reacher
+    if(input.length !=0){
+        apiCall(inputUrl);
+    }else{
+        window.location.reload();
+    }
+})
