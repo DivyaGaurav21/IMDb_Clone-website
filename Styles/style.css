@@ -148,6 +148,7 @@ body{
     width:300px;
     left:-300px;
     /* left: 0; */
+    top: 0;
     text-align: left;
     z-index: 2;
     transition: 1s;
@@ -169,8 +170,68 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     padding:5px 17px;
     color: #fff;
     font-size: 1.1rem;
 }
+.side-list li:hover{
+    background-color: #47474d;
+}
+/* page navigation button css  */
+.page-navigate{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    padding-bottom: 20px;
+}
+.page-navigate button{
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    background-color:rgb(145, 145, 55);
+}
+.page-navigate button:hover{
+    transform: scale(1.1);
+    background-color: black;
+}
+
+
+/* responsiveness and media queries */
+/* when the screen size is 700 and less  */
+@media screen and (max-width:700px) {
+  #signin{
+    display: none;
+  } 
+  .fabs-login{
+    width: 200px;
+    min-width: 200px;
+  }
+  .pop-up{
+    width: 70vh;
+  }
+}
+/* when the screen size is 550 and less  */
+@media screen and (max-width:620px) {
+  .imdb-logo{
+    display: none;
+  }
+  .logo-menu{
+    min-width: 100px;
+  }
+  .fabs-login{
+    min-width: 100px;
+  }
+    
+}
+/* when the screen size is 380 and less  */
+@media screen and (max-width:480px) {
+   .imdbpro{
+    display: none;
+   }
+}
+
+/* css for movie content which is coming through API  */
