@@ -63,7 +63,28 @@ function favMovieData(jsonResp, id) {
                 </div>
             </div>
         </div>
-        
+
     `;
     document.getElementById('list-container').appendChild(eachListItem);
+}
+
+
+// removing all the movies from the fav list 
+// clearing the local storage.
+document.getElementById('clear-whole-list').addEventListener('click', function () {
+    if (window.confirm("Clear All Favorite Movie List")) {
+        localStorage.clear();
+        window.location.reload();
+    }
+});
+
+// deleting single movie from fav array 
+async function deleteMovie(id) {
+    if (window.confirm('Delete this Movie from Favorite List')) {
+        var temp = await JSON.parse(localStorage.getItem('MovieArray'));
+        var i = await temp.indexOf(id.toString());
+        await temp.splice(i, 1);
+        await localStorage.setItem('MovieArray', JSON.stringify(temp));
+        await window.location.reload();
+    }
 }

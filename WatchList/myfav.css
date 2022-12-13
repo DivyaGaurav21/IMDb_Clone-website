@@ -21,9 +21,14 @@
     color: black;
     font-weight: 600;
     border: 1px solid yellow;
+    cursor: pointer;
+}
+.fab-btn:hover{
+    background-color: aqua;
+    border: 1px solid aqua;
 }
 #header span{
-    color: #fff;
+    /* color: #fff; */
     color: aqua;
     font-size: 1.3rem;
 }
@@ -63,4 +68,5 @@
 #removeicon{
     font-size: 1.6rem;
     color: red;
+    cursor: pointer;
 }
