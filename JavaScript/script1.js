@@ -55,11 +55,11 @@ function moviesElement(movie) {
     movieElement.classList.add('movie-element');
     // console.log(movie.poster_path)
     movieElement.innerHTML = `
-    <a href="../MoviePage/moviePage.html?id=${movie.id}"><img src=${IMAGE_URL + movie.poster_path} alt="{movie.id}"></a>
+    <a href="./MoviePage/moviePage.html?id=${movie.id}"><img src=${IMAGE_URL + movie.poster_path} alt="{movie.id}"></a>
     <div class="movie-info">
       <h3>${movie.title}</h3>
       <div class="star-fab">
-      <div class="add-movie-to-list"  id="${movie.id}" onclick="addMovie(${movie.id})">
+      <div class="add-movie-to-list" id="${movie.id}" onclick="addMovie(${movie.id})">
       <span class="icon-color"><i class="fas fa-plus"></i></span>
       </div>
         <span class="icon-color"><i class="fa-solid fa-star">&nbsp;</i>${movie.vote_average}</span>

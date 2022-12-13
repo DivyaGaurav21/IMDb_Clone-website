@@ -1,3 +1,10 @@
+
+/* css for the main div  */
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* css for the body  */
 body{
     margin: 0px;
@@ -5,12 +12,6 @@ body{
     background-blend-mode: multiply;
     background-size: cover;
     color: rgb(255, 255, 255);
-}
-/* css for the main div  */
-#main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 /* display movie details */
 #movie-display{
@@ -60,29 +61,15 @@ body{
 }
 /* youtube video div  */
 .trailer-div{
-    transition: all .2s ease;
+  background-color: #f44336;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  color: #fff;
 }
-.trailer-div i{
-    color: red;
-}
-#trailer-video-div{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    padding: 10px;
-    text-align: end;
-    border-radius: 20px;
-    background-color: rgb(233, 119, 119);
-}
-#trailer-video-div button{
-    cursor: pointer;
-    font-size: 2rem;
-    color: red;
-    background: none;
-    border: none;
-}
+
 /* back button  */
 #return-to-home{
     /* top: 30px; */
@@ -107,6 +94,11 @@ body{
 .plot{
     color: bisque;
     font-size: 1.2rem;
+}
+
+iframe{
+    border: 10px solid #f44336;
+    border-radius: 20px;
 }
 
 
@@ -163,10 +155,6 @@ body{
     }
     .movie-poster{
         height: 65%;
-    }
-    #return-to-home{
-        top: 10px;
-        right: 10px;
     }
     .each-movie-page{
         padding-top: 100px;
