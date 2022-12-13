@@ -27,3 +27,40 @@
     color: aqua;
     font-size: 1.3rem;
 }
+
+/* movies element cart  */
+#list-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movie-details{
+    margin: 20px;
+    border-radius: 20px;
+    background-color: rgb(88, 76, 33);
+}
+/* movie image  */
+#movieimg{
+    border-radius: 20px;
+    height: 420px;
+    width: 310px;
+}
+#details{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.title{
+    max-width: 200px;
+}
+.title a{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+/* remove movie icon  */
+#removeicon{
+    font-size: 1.6rem;
+    color: red;
+}
