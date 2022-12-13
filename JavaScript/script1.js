@@ -55,7 +55,7 @@ function moviesElement(movie) {
     movieElement.classList.add('movie-element');
     // console.log(movie.poster_path)
     movieElement.innerHTML = `
-    <img src=${IMAGE_URL + movie.poster_path} alt="{movie.id}">
+    <a href="../MoviePage/moviePage.html?id=${movie.id}"><img src=${IMAGE_URL + movie.poster_path} alt="{movie.id}"></a>
     <div class="movie-info">
       <h3>${movie.title}</h3>
       <div class="star-fab">

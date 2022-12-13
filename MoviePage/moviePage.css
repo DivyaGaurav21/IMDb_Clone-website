@@ -43,11 +43,11 @@ body{
     box-shadow: 0 28px 9px 0 rgba(0,0,0,0.2);
 }
 .movie-duration i{
-    color: lightblue;
+    color: rgb(255, 15, 243);
 }
 .movie-details > *{
     margin: 20px 50px;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
 }
 /* movie name */
 .title{
@@ -85,21 +85,23 @@ body{
 }
 /* back button  */
 #return-to-home{
-    top: 30px;
+    /* top: 30px; */
     left: 30px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 30px;
     cursor: pointer;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: red;
+    font-size: 1.5rem;
+    background: black;
+    padding:5px 10px;
+    border-radius:5px;
+    border: 1px solid #fff;
+    color: #fff;
 }
 #return-to-home:hover{
-    color: blue;
-    font-size: 2.2rem;
-    background: none;
-    border: none;
+    color: black;
+    /* font-size: 2.2rem; */
+    background-color: #fff;
+    border:1px solid black ;
 }
 /* details of the movie */
 .plot{
