@@ -1,0 +1,29 @@
+.my-fav{
+    color: #fff;
+    font-size: 1.2rem;
+    padding-top:7px;
+
+}
+#header{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+.fab-btn{
+    padding: 6px 12px;
+    background-color: rgb(235, 235, 110);
+    font-size: 1rem;
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+    border: 1px solid yellow;
+}
+#header span{
+    color: #fff;
+    color: aqua;
+    font-size: 1.3rem;
+}

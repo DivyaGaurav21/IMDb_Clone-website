@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMDb clone</title>
     <!-- style css link for index page  -->
-      <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./myfav.css">
+      <link rel="stylesheet" href="../Styles/style.css">
       <!-- here we use font awsome script toolkit -->
     <script
     src="https://kit.fontawesome.com/74894dafb2.js"
@@ -27,27 +28,22 @@
 
              <!-- nav 1st child  -->
               <div class="logo-menu" onclick=showMenu()>
-                <div class="imdb-logo" id="i-logo">
-                     <img src="./assets/IMDB.png" alt="imdb-logo">
+                <div class="imdb-logo">
+                     <img src="../assets/IMDB.png" alt="imdb-logo">
                 </div>
                 <div class="bar-menu hover">
-                    <i class="fa-solid fa-bars"></i> <span>Menu</span>
+                    <i class="fa-solid fa-bars"></i>
                 </div>
               </div>
-                 <!-- nav second child  -->
-              <div class="search-box">
-                <input type="text" name="searchMovie" id="searchMovie" placeholder="Search IMDb"
-                autocomplete="off">
-                <div id="search-icon"> <i class="fa-solid fa-magnifying-glass"></i></div>
-              </div>
+              <div class="my-fav"> <h1>Favorites</h1></div>
               <!-- nav 3rd child  -->
               <div class="fabs-login">
-                <h1 class="hover imdbpro" id="im-pro">IMDb<span id="diff-color">Pro</span>  |</h1>
+                <h1 class="hover imdbpro">IMDb<span id="diff-color">Pro</span>  |</h1>
                  <!-- this small page pop will be shown when you hover IMDbPro option  -->
 <!-- ----------- -->
                 <div class="pop-up">
                   <div class="popup-img">
-                      <img src="./assets/popup.png" alt="popup-img-">
+                      <img src="../assets/IMDB.png" alt="popup-img-">
                   </div>
       
                   <div class="pop-up-desc">
@@ -62,10 +58,8 @@
                   </div>
                  </div>
 <!-- --------------- -->
-
-                <h3 class="hover"><a href=""><i class="fa-solid fa-folder-plus"></i> Watchlist</a></h3>
-                <h3 class="hover" id="signin"><a href="https://www.imdb.com/registration/signin?ref=nv_generic_lgin&u=%2F" target="_blank">Sign In</a></h3>
               </div>
+
          </nav>
             
          <!-- side menu of imdb web  -->
@@ -113,45 +107,28 @@
        </div>
 
 
-
-       <!-- container for movie list coming from IMDB API  -->
-       <div id="movies">
-
-        <!-- <div class="movie-element">
-
-          <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg" alt="image-h">
-          <div class="movie-info">
-            <h3>Movie Title</h3>
-            <div class="star-fab">
-              <span class="yellow"><i class="fa-solid fa-plus"></i></span>
-              <span class="yellow"><i class="fa-solid fa-star">&nbsp;</i>9.8</span>
-            </div>
-          </div>
-          <div class="overview">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit laborum eos nobis nam, cupiditate ducimus optio? Nobis possimus debitis suscipit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, reprehenderit?
-          </div>
-
-        </div> -->
-
-
-       
-
-      </div>
-
-
-      <!-- button for next page and prev page  -->
-      <div class="page-navigate">
-        <button id="prev-page">Prev</button>
-        <button id="next-page">Next</button>
-      </div>
-         
-        
-
+       <!-- Favorites movie list related html comes here  -->
+       <!-- this is the header part  -->
+    <section id="header">
+        <!-- this is the back button to go to the main page  -->
+        <button id="home" class="fab-btn"><a href="../index.html"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- title of the website  -->
+        <span>My Favourite List</span>
+        <!-- button to clear all the fav movies -->
+        <div id="btns">
+            <button id="clear-whole-list" class="fab-btn">Clear All</button>
+        </div>
+    </section>
+    <!-- all the movies will be displayed here when call API  -->
+    <div id="list-container">
 
     
 
 
+    </div>
+
+
     </section>
-   <script type="text/javascript" src="./JavaScript/script1.js"></script> 
+   <script type="text/javascript" src="./myfav.js"></script> 
 </body>
 </html>

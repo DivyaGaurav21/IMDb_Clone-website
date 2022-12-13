@@ -111,13 +111,10 @@ function getMovies(myJson) {
             </div>
 
             <div class="trailer-div" id="trailer-div-btn">
-                Play Movie on Click  >>><i class="fab fa-youtube"></i>
+                <span>Play Movie</span> <i class="fab fa-youtube"></i>
             </div>
               <span><iframe width="460" height="250" src=${youtubeURL} title="YouTube video player" frameborder="0" allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe ></span >
-            <div id="trailer-video-div">
-                <br>     
-            </div>
-    
+          
             <div class="plot">
                 ${myJson.overview}
             </div>

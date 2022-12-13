@@ -18,6 +18,10 @@ const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
 var container = document.getElementById('movies');
 var search = document.getElementById('searchMovie');
+// this is the previous button
+var prevBtn = document.getElementById('prev-page');
+// this is the next button
+var nextBtn = document.getElementById('next-page');
 
 // count of pages 
 let pageNumber = 1;
@@ -113,4 +117,30 @@ search.addEventListener('keyup', function(){
     }else{
         window.location.reload();
     }
+})
+
+
+// disable the prev btn when the page is 1
+prevBtn.disabled = true;
+function disablePBtn() {
+    if (pageNumber == 1) prevBtn.disabled = true;
+    else prevBtn.disabled = false;
+}
+
+// got to next page 
+nextBtn.addEventListener('click', () => {
+    pageNumber++;
+    let tempURL = `https://api.themoviedb.org/3/discover/movie?${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNumber}&with_watch_monetization_types=flatrate`;
+    apiCall(tempURL);
+    disablePBtn();
+});
+
+// got to prev page 
+prevBtn.addEventListener('click', () => {
+    if (pageNumber == 1) return;
+
+    pageNumber--;
+    let tempURL = `https://api.themoviedb.org/3/discover/movie?${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNumber}&with_watch_monetization_types=flatrate`;
+    apiCall(tempURL);
+    disablePBtn();
 })
