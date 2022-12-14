@@ -107,7 +107,10 @@ iframe{
     border-radius: 20px;
 }
 
-
+#search-icon a{
+    color: #fff;
+    cursor: pointer;
+}
 /* responsiveness and media queries */
 @media screen and (max-width: 1620px) {
     #movie-display{
@@ -213,3 +216,6 @@ iframe{
         height: 168.75x;
     }
 }
+
+
+
