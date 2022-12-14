@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMDb clone</title>
-    <!-- style css link for index page  -->
+    <title>Movie Details</title>
+    <!-- common css style css  -->
       <link rel="stylesheet" href="../Styles/style.css">
+      <!-- extenal css for movie page  -->
       <link rel="stylesheet" href="./moviePage.css">
       <!-- here we use font awsome script toolkit -->
     <script
@@ -22,8 +23,7 @@
 <body>
     <!-- this is the main container of website  -->
     <section class="main">
-
-
+ <!-- navigation section html code which include logo(Menu) , searchBox , watchList(favorite movie list) , imbdPro(popup) section & signIn Imdb Functionality    -->
          <nav class="nav-menu">
 
              <!-- nav 1st child  -->
@@ -63,13 +63,16 @@
                   </div>
                  </div>
 <!-- --------------- -->
-
+                 <!-- 4th child  -->
                 <h3 class="hover"><a href="../WatchList/myfav.html"><i class="fa-solid fa-folder-plus"></i> Watchlist</a></h3>
                 <h3 class="hover" id="signin"><a href="https://www.imdb.com/registration/signin?ref=nv_generic_lgin&u=%2F" target="_blank">Sign In</a></h3>
               </div>
          </nav>
             
          <!-- side menu of imdb web  -->
+          <!-- when you click menu option and logo then 
+         side option will appear and when you click cross icon then 
+         side option goes back -->
 
          <div class="side-option" id="side">
           <i class="fa fa-times" onclick="hideMenu()"></i>
@@ -77,6 +80,7 @@
           <br>
            <ul class="side-list">
                <li>
+                <!-- here class containing fa-solid all are icons which i takes from font awsome website -->
                 <div> <i class="fa-solid fa-film"></i>&nbsp;<span>Movies</span></div>
                 <div><i class="fa-solid fa-chevron-down"></i></div>
                </li>
@@ -118,6 +122,7 @@
 
     <!-- main div  -->
  <div id="main">
+  <!-- container for movie list coming from IMDB API here i access Api proprty and functionality and form dynamic Html Element that append here-->
         <!-- movie is displayed here  -->
     <div id="movie-display">
        
@@ -171,13 +176,8 @@
        
       
 
-        
-
-
-    
-
-
     </section>
+    <!-- external javascript for movie page  -->
    <script type="text/javascript" src="./moviePage.js"></script> 
 </body>
 </html>

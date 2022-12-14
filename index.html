@@ -17,15 +17,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat&display=swap" rel="stylesheet">
 </head>
+
 <!-- body section begins here -->
 <body>
     <!-- this is the main container of website  -->
     <section class="main">
-
-
+          <!-- navigation section html code which include logo(Menu) , searchBox , watchList(favorite movie list) , imbdPro(popup) section & signIn Imdb Functionality    -->
+        
          <nav class="nav-menu">
 
              <!-- nav 1st child  -->
+             <!-- show menu Functionality is used for pull side menu  -->
               <div class="logo-menu" onclick=showMenu()>
                 <div class="imdb-logo" id="i-logo">
                      <img src="./assets/IMDB.png" alt="imdb-logo">
@@ -43,7 +45,7 @@
               <!-- nav 3rd child  -->
               <div class="fabs-login">
                 <h1 class="hover imdbpro" id="im-pro">IMDb<span id="diff-color">Pro</span>  |</h1>
-                 <!-- this small page pop will be shown when you hover IMDbPro option  -->
+                 <!-- this small page pop page will be shown when you hover IMDbPro option  -->
 <!-- ----------- -->
                 <div class="pop-up">
                   <div class="popup-img">
@@ -62,13 +64,16 @@
                   </div>
                  </div>
 <!-- --------------- -->
-
+                 <!-- 4th child  -->
                 <h3 class="hover"><a href="./WatchList/myfav.html"><i class="fa-solid fa-folder-plus"></i> Watchlist</a></h3>
                 <h3 class="hover" id="signin"><a href="https://www.imdb.com/registration/signin?ref=nv_generic_lgin&u=%2F" target="_blank">Sign In</a></h3>
               </div>
          </nav>
             
          <!-- side menu of imdb web  -->
+         <!-- when you click menu option and logo then 
+         side option will appear and when you click cross icon then 
+         side option goes back -->
 
          <div class="side-option" id="side">
           <i class="fa fa-times" onclick="hideMenu()"></i>
@@ -76,6 +81,7 @@
           <br>
            <ul class="side-list">
                <li>
+                 <!-- here class containing fa-solid all are icons which i takes from font awsome website -->
                 <div> <i class="fa-solid fa-film"></i>&nbsp;<span>Movies</span></div>
                 <div><i class="fa-solid fa-chevron-down"></i></div>
                </li>
@@ -114,7 +120,7 @@
 
 
 
-       <!-- container for movie list coming from IMDB API  -->
+       <!-- container for movie list coming from IMDB API here i access Api proprty and functionality and form dynamic Html Element that append here-->
        <div id="movies">
 
         <!-- <div class="movie-element">
@@ -145,13 +151,9 @@
         <button id="next-page">Next</button>
       </div>
          
-        
-
-
-    
-
 
     </section>
+    <!-- external javascript for home page  -->
    <script type="text/javascript" src="./JavaScript/script1.js"></script> 
 </body>
 </html>

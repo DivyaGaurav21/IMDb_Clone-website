@@ -22,12 +22,14 @@ body{
     width: 100vw;
     height: 100vh;
 }
+/* individual movie related css  */
 .each-movie-page{
     height: inherit;
     width: inherit;
     display: flex;
     align-items: center;
 }
+/* movie poster class css  */
 .movie-poster{
     margin: 0px 20px;
     height: 95%;
@@ -99,7 +101,7 @@ body{
     color: bisque;
     font-size: 1.2rem;
 }
-
+/* frame of movie video css  */
 iframe{
     border: 10px solid #f44336;
     border-radius: 20px;

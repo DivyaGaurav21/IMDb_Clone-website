@@ -1,5 +1,6 @@
-// Script for open side menu and hide menu when you click on Icon 
+    // Script1 is script for Home(index.html) page 
 
+// Script for open side menu and hide menu when you click on Icon 
 var sideOption = document.getElementById("side");
 function showMenu() {
     sideOption.style.left = "0";
@@ -8,14 +9,15 @@ function hideMenu() {
     sideOption.style.left = "-300px";
 }
 
-// java script for fetching the API 
+// java script for fetching the API
+// this is Api key we get it from TMDb website(IMDb Api)
 const API_KEY = 'api_key=49e3be45df1c1a483b5eb9560e3c73ab';
 // const API_URL = 'https://api.themoviedb.org/3/movie/550?api_key=49e3be45df1c1a483b5eb9560e3c73ab';
 const API_URL = `https://api.themoviedb.org/3/discover/movie?${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`;
-// this is the image url 
+// this is the image url of Api
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
-
+// we access Element by DOM Api and stores element in variable 
 var container = document.getElementById('movies');
 var search = document.getElementById('searchMovie');
 // this is the previous button
@@ -70,13 +72,14 @@ function moviesElement(movie) {
       </div>
     </div>
     <div class="overview">${movie.overview}</div>
-    `
-
+    `;
+    //  now append this upcoming html in movieElement Container 
     container.appendChild(movieElement);
 }
 
 // array to store fav movies 
-var favMovies=[];
+var favMovies = [];
+// this old Movie list array kept previous local storage favorite Movie 
 var oldLocalsMov=[];
 
 // function to add movie to fav list 
@@ -128,6 +131,7 @@ function disablePBtn() {
 }
 
 // got to next page 
+// when pageNumber is greater then 1 then call APi for acceess next page 
 nextBtn.addEventListener('click', () => {
     pageNumber++;
     let tempURL = `https://api.themoviedb.org/3/discover/movie?${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNumber}&with_watch_monetization_types=flatrate`;
@@ -135,7 +139,9 @@ nextBtn.addEventListener('click', () => {
     disablePBtn();
 });
 
-// got to prev page 
+// got to prev page
+//   when page number is 1 then disable btn 
+// otherWise call Api Access for prev page 
 prevBtn.addEventListener('click', () => {
     if (pageNumber == 1) return;
 

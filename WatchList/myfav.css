@@ -1,9 +1,11 @@
+/* my-favorite css  */
 .my-fav{
     color: #fff;
     font-size: 1.2rem;
     padding-top:7px;
 
 }
+/* main header section css  of myfavorite page */
 #header{
     margin: auto;
     width: 90%;
@@ -13,6 +15,7 @@
     justify-content: space-between;
     margin: 15px auto;
 }
+/* clear all and home btn related css  */
 .fab-btn{
     padding: 6px 12px;
     background-color: rgb(235, 235, 110);
@@ -50,12 +53,14 @@
     height: 420px;
     width: 310px;
 }
+/* detais css  */
 #details{
     display: flex;
     justify-content: space-between;
     padding: 20px;
     align-items: center;
 }
+/* title of movie  */
 .title{
     max-width: 200px;
 }

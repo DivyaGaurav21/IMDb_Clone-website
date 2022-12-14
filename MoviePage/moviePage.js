@@ -1,5 +1,4 @@
 // // Script for open side menu and hide menu when you click on Icon 
-
 var sideOption = document.getElementById("side");
 function showMenu() {
     sideOption.style.left = "0";
@@ -8,14 +7,15 @@ function hideMenu() {
     sideOption.style.left = "-300px";
 }
 
-
+// we access Element by DOM Api and stores element in variable 
 var container = document.getElementById('movies');
 var search = document.getElementById('searchMovie');
 
-// count of pages 
-// Acceassing API 
+// this is Api key we get it from TMDb website(IMDb Api)
 const API_KEY = 'api_key=49e3be45df1c1a483b5eb9560e3c73ab';
+// base Url of Api
 const BASE_URL = 'https://api.themoviedb.org/3';
+// image url of Api 
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
 
@@ -24,14 +24,15 @@ let id = '';
 const urlParams = new URLSearchParams(location.search);
 for (const [key, value] of urlParams) {
     id = value;
-    console.log('id', id)
+    // console.log('id', id)
 }
-
-console.log("id" , id)
+// we create link of single movie item by IMDb Api 
 let link = `/movie/${id}?language=en-US&append_to_response=videos&`;
 let find_url = BASE_URL + link + API_KEY;
 // console.log(find_url);
 
+
+// call apiCall function with find_url Arguments 
 apiCall(find_url);
 
 // function to create element 
@@ -56,7 +57,7 @@ function apiCall(url) {
 }
 
 
-// filter video  in array
+// filter video in array
 function filterArray(obj) {
     var vtitle = obj.name
     var rg = /Official Trailer/i;
@@ -120,6 +121,6 @@ function getMovies(myJson) {
             </div>
         </div>
     `;
-
+//    now append this upcoming html in movie display container 
     document.getElementById('movie-display').appendChild(movieDiv);
 }
